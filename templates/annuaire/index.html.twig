@@ -6,13 +6,19 @@
 
 <div class="container m-4">
     {% for contact in contacts %}
-        <div class="card shadow p-4 m-2">
+        <div class="card shadow p-4 m-5">
+            <img src="{{ contact.imageProfile }}"
+                alt="Photo profile de {{ contact.prenom }} {{ contact.nom }}"
+                class="rounded-circle position-absolute top-0 start-0 translate-middle" />
             <div class="body">
                 <h5 class="card-title">
                     {{ contact.nom }} {{ contact.prenom }}
                 </h5>
                 <p class="card-text">
                     {{ contact.telephone }}
+                </p>
+                <p class="card-text">
+                    {{ contact.adresse }}
                 </p>
             </div>
         </div>
